@@ -1,0 +1,70 @@
+
+Question 1 - 
+
+Write the queries for the following tasks - 
+//1.Create a database name - “Employee”.
+CREATE DATABASE Employee;
+
+//2.Create a table name - “Employee Details”.
+CREATE TABLE Employee_Details (
+  Emp_id INTEGER PRIMARY KEY,
+  Emp_name TEXT NOT NULL,
+  job_name TEXT NOT NULL,
+  Manager_id TEXT NOT NULL,
+  Hire_data TEXT NOT NULL,
+  Salary TEXT NOT NULL,
+  Dep_id TEXT NOT NULL
+);
+
+//Insert 10 details in the “Employee Details” table  - Emp_id,,Emp_name,Job_name,Manager_id,Hire_date,Salary,Dep_id
+INSERT INTO Employee_Details VALUES (68319, 'Mr.Singh', 'PRESIDENT','63819', '1991-1-12', '6000','1001');
+INSERT INTO Employee_Details VALUES (68311, 'Mr.Vijay', 'MANAGER ','63811', '1991-5-12', '6000','1011');
+INSERT INTO Employee_Details VALUES (68312, 'Mr.Manoj', 'MANAGER ','63812', '1999-1-14', '6000','1012');
+INSERT INTO Employee_Details VALUES (68313, 'Mr.Sai', 'ANALYST','63813', '1998-6-4', '6000','1013');
+INSERT INTO Employee_Details VALUES (68314, 'Mr.Ramu', 'MANAGER ','63814', '1997-7-8', '6000','1014');
+INSERT INTO Employee_Details VALUES (68315, 'Mr.shiva', 'MANAGER ','63815', '1995-3-1', '6000','1016');
+INSERT INTO Employee_Details VALUES (68316, 'Mr.Mahi', 'CLERK','63816', '1997-2-12', '6000','1015');
+INSERT INTO Employee_Details VALUES (68317, 'Mr.jayanth', 'SALESMAN','63817', '1993-1-16', '6000','1017');
+INSERT INTO Employee_Details VALUES (68318, 'Mr.krishna', 'ANALYST','63818', '1992-12-7', '6000','1018');
+INSERT INTO Employee_Details VALUES (68320, 'Mr.varun', 'SALESMAN','63820', '1999-1-15', '6000','1019');
+
+//Find the salaries of all the employees from the “Employee Details” table.
+SELECT salary FROM Employee_Details;
+
+//Find the unique designations of the employees from the tabl
+SELECT DISTINCT job_name FROM Employee_Details;
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Question 2 - 
+
+  Write the queries for the following tasks -
+//1. Create a database name - “Football”.
+CREATE DATABASE Football;
+
+//2.Create a table name - “Football Venue”.
+CREATE TABLE Football_Venue (
+  venue_id INTEGER PRIMARY KEY,
+  venue_name TEXT NOT NULL,
+  city_id INTEGER NOT NULL,
+  capacity INTEGER NOT NULL
+);
+
+//Insert 10 details in the “Football Venue” table  - venue_id,venue_name,city_id,capacity
+INSERT INTO Football_Venue VALUES (20001, 'France', 10003,42115);
+INSERT INTO Football_Venue VALUES (20002, 'Paris', 10001,38223);
+INSERT INTO Football_Venue VALUES (20003, 'France', 10005,23345);
+INSERT INTO Football_Venue VALUES (20004, 'Landon', 10002,15455);
+INSERT INTO Football_Venue VALUES (20005, 'Landon', 10008,78763);
+INSERT INTO Football_Venue VALUES (20006, 'Landon', 10004,36578);
+INSERT INTO Football_Venue VALUES (20007, 'Paris', 10007,42115);
+INSERT INTO Football_Venue VALUES (20008, 'Paris', 10006,43267);
+INSERT INTO Football_Venue VALUES (20009, 'France', 10009,14687);
+INSERT INTO Football_Venue VALUES (20010, 'France', 10010,68436);
+
+// Count the number of venues of the football world cup
+SELECT COUNT(*) FROM Football_Venue;
+
+//List all the venue names and capacities in the format of “Location” and “Volume”.
+SELECT venue_name AS Location, capacity AS Volume FROM Football_Venue;
